@@ -1,24 +1,21 @@
-<p align="center">
-  <a href="https://beemotion.app">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.png">
-      <img alt="BeEmotion" src="assets/logo-light.png" width="420">
-    </picture>
-  </a>
-</p>
+<a href="https://beemotion.app">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+    <img alt="BeEmotion: AI-powered video analytics for emotional and behavioral insights." src="assets/banner-light.svg" width="100%">
+  </picture>
+</a>
 
 <p align="center">
-  <b>Vision AI that understands people.</b><br>
-  Faces, emotion, head and body pose, objects, text and speech, from one REST API, an MCP server and an OpenAI-compatible chat endpoint.
+  <a href="https://beemotion.app"><img alt="Website" src="https://img.shields.io/badge/beemotion.app-FF0080?style=flat-square"></a>
+  <a href="https://docs.beemotion.app"><img alt="Docs" src="https://img.shields.io/badge/docs-docs.beemotion.app-FF0080?style=flat-square"></a>
+  <a href="https://api.beemotion.app/v1/openapi.json"><img alt="OpenAPI" src="https://img.shields.io/badge/OpenAPI-v1-FF0080?style=flat-square"></a>
+  <a href="https://docs.beemotion.app/guides/mcp-and-skills"><img alt="MCP server" src="https://img.shields.io/badge/MCP-server-FF0080?style=flat-square"></a>
+  <a href="https://api.beemotion.app/v1/health"><img alt="API status" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.beemotion.app%2Fv1%2Fhealth&query=%24.status&label=API&color=FF0080&style=flat-square"></a>
 </p>
 
-<p align="center">
-  <a href="https://beemotion.app">Website</a> ·
-  <a href="https://docs.beemotion.app">Docs</a> ·
-  <a href="https://docs.beemotion.app/quickstart">Quickstart</a> ·
-  <a href="https://api.beemotion.app/v1/openapi.json">OpenAPI</a> ·
-  <a href="https://docs.beemotion.app/changelog">Changelog</a>
-</p>
+### Ready to discover what your audience really feels?
+
+BeEmotion reads faces, emotion, head and body pose, objects, text and speech in images and video. Use it from one REST API, an MCP server for coding agents, or an OpenAI-compatible chat endpoint.
 
 <table>
   <tr>
@@ -30,8 +27,10 @@
 
 ## Try it
 
+Create a key at [beemotion.app](https://beemotion.app) under Developer > API keys. New accounts get $5 of free credit, and failed calls are free.
+
 ```bash
-export BEEMOTION_API_KEY="be_live_..."   # create one at beemotion.app > Developer > API keys
+export BEEMOTION_API_KEY="be_live_..."
 
 curl https://api.beemotion.app/v1/image/analyze \
   -H "Authorization: Bearer $BEEMOTION_API_KEY" \
@@ -39,14 +38,22 @@ curl https://api.beemotion.app/v1/image/analyze \
   -d '{"image_url": "https://docs.beemotion.app/images/samples/crew-expedition-14.jpg", "tasks": ["face", "emotion"]}'
 ```
 
+Or ask about an image with the official `openai` SDK:
+
 ```python
-# pip install beemotion
-from beemotion import Client
+import os
+from openai import OpenAI
 
-result = Client().image.analyze("photo.jpg", tasks=["face", "emotion"])
+client = OpenAI(base_url="https://api.beemotion.app/v1/openai", api_key=os.environ["BEEMOTION_API_KEY"])
+response = client.chat.completions.create(
+    model="qwen3-vl-2b-instruct",
+    messages=[{"role": "user", "content": [
+        {"type": "text", "text": "How many people are in the picture?"},
+        {"type": "image_url", "image_url": {"url": "https://docs.beemotion.app/images/samples/station-laptops.jpg"}},
+    ]}],
+)
+print(response.choices[0].message.content)
 ```
-
-New accounts get $5 of free credit. Failed calls are free.
 
 ## What it does
 
@@ -78,5 +85,7 @@ The MCP server works with Claude Code, Cursor, Codex and any Streamable HTTP cli
 | [beem-skills](https://github.com/beem-ai/beem-skills) | Agent skill (`SKILL.md`) and MCP client configs |
 | [beem-cookbook](https://github.com/beem-ai/beem-cookbook) | Notebooks, demo apps and starter templates |
 | [beem-docs](https://github.com/beem-ai/beem-docs) | Source of [docs.beemotion.app](https://docs.beemotion.app) |
+
+Questions? Email [info@beemotion.ai](mailto:info@beemotion.ai).
 
 <sub>Sample photos: NASA, public domain. Annotations drawn from real BeEmotion API responses.</sub>
