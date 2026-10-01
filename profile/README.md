@@ -25,6 +25,17 @@ BeEmotion reads faces, emotion, head and body pose, objects, text and speech in 
   </tr>
 </table>
 
+## Built for
+
+<table>
+  <tr>
+    <td valign="top" width="25%"><b>Film and media testing</b><br><sub>See how test audiences react, scene by scene, to sharpen the final edit.</sub></td>
+    <td valign="top" width="25%"><b>Adaptive games</b><br><sub>Tune difficulty and pacing to how players respond in real time.</sub></td>
+    <td valign="top" width="25%"><b>Simulator training</b><br><sub>Measure stress responses in flight and driving simulators for evidence-based debriefs.</sub></td>
+    <td valign="top" width="25%"><b>User research</b><br><sub>Timestamp reactions in usability sessions and product tests.</sub></td>
+  </tr>
+</table>
+
 ## Try it
 
 Create a key at [beemotion.app](https://beemotion.app) under Developer > API keys. New accounts get $5 of free credit, and failed calls are free.
@@ -76,6 +87,12 @@ claude mcp add --transport http beemotion https://api.beemotion.app/mcp \
 ```
 
 The MCP server works with Claude Code, Cursor, Codex and any Streamable HTTP client. See [MCP and agent skills](https://docs.beemotion.app/guides/mcp-and-skills).
+
+## Responsible use
+
+- **Consent first.** Face recognition only matches people your organization has enrolled, and every enrolment requires a consent attestation. See [Identities and consent](https://docs.beemotion.app/guides/identities-and-consent).
+- **Expressions, not minds.** Emotion results describe visible facial expressions. Use them to compare reactions across moments and groups, not to judge an individual or make decisions about them.
+- **Know the rules where you deploy.** For example, the EU AI Act bans emotion recognition in workplaces and schools, apart from medical and safety uses.
 
 ## Repositories
 
