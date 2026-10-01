@@ -1,0 +1,30 @@
+name: Bug report
+description: Something does not work as documented.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Never paste an API key here. Report security problems privately, see SECURITY.md.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you ran, what you expected and what you got instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: The smallest command or code that shows the problem.
+      render: shell
+  - type: input
+    id: request-id
+    attributes:
+      label: Request id
+      description: The x-request-id header of a failing API call, if there is one.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: SDK, CLI or tool version, plus your OS and language version.
