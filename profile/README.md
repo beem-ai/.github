@@ -29,10 +29,14 @@ BeEmotion reads faces, emotion, head and body pose, objects, text and speech in 
 
 <table>
   <tr>
-    <td valign="top" width="25%"><b>Film and media testing</b><br><sub>See how test audiences react, scene by scene, to sharpen the final edit.</sub></td>
-    <td valign="top" width="25%"><b>Adaptive games</b><br><sub>Tune difficulty and pacing to how players respond in real time.</sub></td>
-    <td valign="top" width="25%"><b>Simulator training</b><br><sub>Measure stress responses in flight and driving simulators for evidence-based debriefs.</sub></td>
-    <td valign="top" width="25%"><b>User research</b><br><sub>Timestamp reactions in usability sessions and product tests.</sub></td>
+    <td valign="top" width="33%"><b>Border and checkpoint screening</b><br><sub>Flag travellers whose behaviour suggests a closer look, so officers can focus heightened screening where it matters.</sub></td>
+    <td valign="top" width="33%"><b>Film and media testing</b><br><sub>See how test audiences react, scene by scene, to sharpen the final edit.</sub></td>
+    <td valign="top" width="33%"><b>Adaptive games</b><br><sub>Tune difficulty and pacing to how players respond in real time.</sub></td>
+  </tr>
+  <tr>
+    <td valign="top" width="33%"><b>Simulator training</b><br><sub>Measure stress responses during simulated emergencies for evidence-based pilot debriefs.</sub></td>
+    <td valign="top" width="33%"><b>Driver monitoring</b><br><sub>Track attention, head pose and in-cabin objects to spot distracted drivers and who is in the cabin.</sub></td>
+    <td valign="top" width="33%"><b>User research</b><br><sub>Timestamp reactions in usability sessions and product tests.</sub></td>
   </tr>
 </table>
 
@@ -91,7 +95,7 @@ The MCP server works with Claude Code, Cursor, Codex and any Streamable HTTP cli
 ## Responsible use
 
 - **Consent first.** Face recognition only matches people your organization has enrolled, and every enrolment requires a consent attestation. See [Identities and consent](https://docs.beemotion.app/guides/identities-and-consent).
-- **Expressions, not minds.** Emotion results describe visible facial expressions. Use them to compare reactions across moments and groups, not to judge an individual or make decisions about them.
+- **Keep a person in the loop.** Emotion and behaviour results describe what is visible on camera. Use them to direct attention, and leave decisions about a person to a trained human.
 - **Know the rules where you deploy.** For example, the EU AI Act bans emotion recognition in workplaces and schools, apart from medical and safety uses.
 
 ## Repositories
