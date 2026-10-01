@@ -29,7 +29,7 @@ BeEmotion reads faces, emotion, head and body pose, objects, text and speech in 
 
 <table>
   <tr>
-    <td valign="top" width="33%"><b>Border and checkpoint screening</b><br><sub>Flag travellers whose behaviour suggests a closer look, so officers can focus heightened screening where it matters.</sub></td>
+    <td valign="top" width="33%"><b>Border and checkpoint screening</b><br><sub>Flag travellers whose behaviour suggests a closer look, so officers can focus heightened screening where it matters.<br><br><b>Proof of concept:</b> 20% more accurate than human screeners at identifying travellers who needed heightened screening, at a national border agency's land checkpoints.</sub></td>
     <td valign="top" width="33%"><b>Film and media testing</b><br><sub>See how test audiences react, scene by scene, to sharpen the final edit.</sub></td>
     <td valign="top" width="33%"><b>Adaptive games</b><br><sub>Tune difficulty and pacing to how players respond in real time.</sub></td>
   </tr>
